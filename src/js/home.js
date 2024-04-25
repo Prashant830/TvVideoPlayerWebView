@@ -17,7 +17,7 @@ $.getJSON('../assets/demoJson.json', function(data) {
 
                 card.click(function() {
                     try {
-                        AndroidInterface.showMsg("fname","pswd");
+                        AndroidInterface.showVideoWithJdkMethod(reelData.image);
                     } catch (error) {
                         console.log(error)
                     }
