@@ -16,7 +16,11 @@ $.getJSON('../assets/demoJson.json', function(data) {
                 $(".itemsRow").append(card);
 
                 card.click(function() {
-                    console.log(reelData.title);
+                    try {
+                        AndroidInterface.showMsg("fname","pswd");
+                    } catch (error) {
+                        console.log(error)
+                    }
                 });
 
             });
