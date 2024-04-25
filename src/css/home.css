@@ -9,8 +9,25 @@
 
 .h1{
     font-size: 5vw;
-    color: black;
+    color: back;
     font-weight: 600;
     font-style: italic;
     margin-top: 1vw;
+}
+
+
+.card {
+    width:222px; /* You can adjust this value as per your design */
+    height: 400px;
+    background-repeat: no-repeat; /* Changed to no-repeat */
+    background-size: 100% 100%; /* Changed to cover */
+}
+
+.itemsRow {
+    width: fit-content; /* Adjusted to full width */
+    display: flex;
+    margin-top: 25px;
+    flex-wrap: wrap; /* Added flex-wrap to wrap cards */
+    justify-content: row;
+    gap: 20px;
 }
