@@ -18,7 +18,7 @@ $.getJSON('../assets/demoJson.json', function(data) {
                 card.click(function() {
                     try {
                         console.log("interface calls")
-                        AndroidInterface.showVideoWithNdkMethod(reelData.image);
+                        AndroidInterface.showVideoWithJdkMethod(reelData.image);
                     } catch (error) {
                         console.log(error)
                     }
