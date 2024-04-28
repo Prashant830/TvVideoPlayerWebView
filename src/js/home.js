@@ -18,6 +18,7 @@ $.getJSON('../assets/demoJson.json', function(data) {
                 card.click(function() {
                     try {
                         AndroidInterface.showVideoWithNdkMethod(reelData.image);
+                        console.log("interface calls")
                     } catch (error) {
                         console.log(error)
                     }
@@ -32,5 +33,5 @@ $.getJSON('../assets/demoJson.json', function(data) {
     }
 })
 .fail(function(jqXHR, textStatus, errorThrown) {
-    console.error("Error fetching JSON file:", errorThrown);
+    console.log("Error fetching JSON file:", errorThrown);
 });
