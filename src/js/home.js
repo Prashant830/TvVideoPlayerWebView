@@ -14,13 +14,13 @@ $.getJSON('../assets/demoJson.json', function(data) {
 
                // jdk method 
             var card = $('<div class="card"></div>');
-                card.css('background-image', 'url(' +data.items[0].contentList[0].image + ')');
+                card.css('background-image', 'url(' + data.items[0].contentList[0].image + ')');
                 $(".itemsRow").append(card);
 
                 card.click(function() {
                     try {
                         console.log("interface calls for jdk")
-                        AndroidInterface.showVideoWithJdkMethod(reelData.image);
+                        AndroidInterface.showVideoWithJdkMethod(data.items[0].contentList[0].image);
                     } catch (error) {
                         console.log(error)
                     }
@@ -36,7 +36,7 @@ $.getJSON('../assets/demoJson.json', function(data) {
                 card.click(function() {
                     try {
                         console.log("interface calls for Ndk")
-                        AndroidInterface.showVideoWithNdkMethod(reelData.image);
+                        AndroidInterface.showVideoWithNdkMethod(data.items[0].contentList[1].image);
                     } catch (error) {
                         console.log(error)
                     }
